@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="./favicon.png" type="image/x-icon">
+</head>
+<body>
+    
+    <section class="container">
+        <h1>TODO List</h1>
+        <p>Welcome to the TODO list application. You can add, search, and manage your tasks efficiently.</p>
+        <section class="addSearch">
+            <p>
+                <input type="text" id="search" placeholder="Start typing...">
+                <button onclick="searchTasks()" class="btn"><i class="fas fa-search"></i> 
+                </button>
+            </p>
+            <p>
+                <button onclick="openModal()" class="btn"><i class="fas fa-plus"></i> </button>
+            </p>
+        </section>
+        <div id="modal">
+            <div id="modal-content">
+                <span id="close" onclick="closeModal()">&times;</span>
+                <h2>Add New Task</h2>
+                <input type="text" id="task" placeholder="Enter task description...">
+                <button onclick="createTask()" class="btn">Add</button>
+            </div>
+        </div>
+        
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>TODO Description</th>
+                <th>User ID</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+        <tfoot>
+            
+        </tfoot>
+    </table>
+    <div id="pagination">
+        <span>
+            <button onclick="prevPage()" id="pre-arrow" class="btn"><i class="fas fa-arrow-left"></i></button>
+        </span>
+        <ul>
+
+        </ul> 
+        <span>
+            <button onclick="nextPage()" id="next-arrow" class="btn"><i class="fas fa-arrow-right"></i></button>
+        </span>
+    </div>
+    </section>
+
+    
+    <script src="script.js" def></script>
+    
+</body>
+</html>
