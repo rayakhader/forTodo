@@ -53,6 +53,7 @@ async function createTask() {
   renderPagination();
   renderTaskCount();
   displayPage();
+  closeModal();
 }
 
 function displayPage(pageNum = 1) {
@@ -152,7 +153,7 @@ async function removeTask(id) {
   await loadTasks();
   renderPagination();
   renderTaskCount();
-  displayPage(currentPageNumber);
+  displayPage();
 }
 
 async function markTaskAsDone(id) {
