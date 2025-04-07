@@ -104,7 +104,7 @@ function displayPage(pageNum = 1) {
 function renderPagination() {
   const list = document.querySelector('ul');
   list.innerHTML = '';
-  const totalPages = Math.ceil(allTasks.length / itemsPerPage);
+  const totalPages = Math.ceil(JSON.parse(localStorage.getItem('tasks')).length / itemsPerPage);
 
   for (let i = 1; i <= totalPages; i++) {
     const li = document.createElement('li');
