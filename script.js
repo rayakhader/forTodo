@@ -127,7 +127,7 @@ function updateVisiblePages() {
 }
 
 function nextPage() {
-  const total = Math.ceil(allTasks.length / itemsPerPage);
+  const total = Math.ceil(JSON.parse(localStorage.getItem('tasks')).length / itemsPerPage);
   if (currentPageNumber < total) {
     currentPageNumber++;
     displayPage(currentPageNumber);
