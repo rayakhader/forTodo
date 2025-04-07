@@ -52,7 +52,8 @@ async function createTask() {
   input.value = '';
   renderPagination();
   renderTaskCount();
-  displayPage();
+  const totalPages = Math.ceil(JSON.parse(localStorage.getItem('tasks')).length / itemsPerPage);
+  totalPages > currentPageNumber ? displayPage(totalPages) : displayPage(currentPageNumber);
   closeModal();
 }
 
