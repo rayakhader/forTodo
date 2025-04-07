@@ -53,7 +53,16 @@ async function createTask() {
   renderPagination();
   renderTaskCount();
   const totalPages = Math.ceil(JSON.parse(localStorage.getItem('tasks')).length / itemsPerPage);
-  totalPages > currentPageNumber ? displayPage(totalPages) : displayPage(currentPageNumber);
+  if (totalPages > currentPageNumber) {
+    if (totalPages > endVisiblePage + 1) {
+      displayPage(totalPages);
+      startVisiblePage++;
+      endVisiblePage++;
+      updateVisiblePages();
+    } else {
+      displayPage(currentPageNumber);
+    }
+  }
   closeModal();
 }
 
