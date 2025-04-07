@@ -60,8 +60,10 @@ async function createTask() {
       endVisiblePage++;
       updateVisiblePages();
     } else {
-      displayPage(currentPageNumber);
+      displayPage(totalPages);
     }
+  }else{
+    displayPage(currentPageNumber);
   }
   closeModal();
 }
