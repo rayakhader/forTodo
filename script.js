@@ -109,7 +109,7 @@ function renderPagination() {
     document.querySelector('#pagination').style.display = 'none';
     return;
   }
-  document.querySelector('#pagination').style.display = 'block';
+  document.querySelector('#pagination').style.display = 'flex';
   for (let i = 1; i <= totalPages; i++) {
     const li = document.createElement('li');
     li.innerHTML = `<a href="#" onclick="displayPage(${i})">${i}</a>`;
